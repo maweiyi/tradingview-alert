@@ -1,5 +1,7 @@
 import * as express from 'express';
 import bot from '../telegrambot/bot';
+import * as path from "path";
+require('dotenv').config({ path: path.join(__dirname, '../../.env') });
 
 const router = express.Router();
 
