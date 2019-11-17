@@ -1,4 +1,3 @@
-import * as http from 'http';
 import * as https from 'https';
 import app from '../main';
 import * as fs from 'fs';
@@ -20,6 +19,7 @@ if (process.env.NODE_ENV === 'development') {
 
   httpsServer.listen(process.env.HTTPS_PORT);
   httpsServer.on('listening', function() {
+    // eslint-disable-next-line
     console.log(`https listening on ${process.env.HTTPS_PORT}`);
   });
 } else if (process.env.NODE_ENV === 'production') {
@@ -32,6 +32,7 @@ if (process.env.NODE_ENV === 'development') {
   httpsServer = https.createServer(options, app);
   httpsServer.listen(process.env.PRODUCTION_HTTPS_PORT);
   httpsServer.on('listening', function() {
+    // eslint-disable-next-line
     console.log(`https listening on ${process.env.PRODUCTION_HTTPS_PORT}`);
   });
 }
