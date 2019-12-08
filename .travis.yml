@@ -1,7 +1,6 @@
 language: node_js
 node_js:
   - 12
-sudo: required
 env:
   global:
     - PRODUCTION_HTTPS_PORT=443
