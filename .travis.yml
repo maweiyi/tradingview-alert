@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 12
+  - 10
 env:
   global:
     - PRODUCTION_HTTPS_PORT=443
@@ -19,4 +19,4 @@ before_install:
     -in id_rsa.enc -out ~/.ssh/id_rsa -d
 after_success:
   - chmod 600 ~/.ssh/id_rsa
-  - ssh root@138.197.215.14 -o StrictHostKeyChecking=no 'npm install -g pm2 && cd ~/code/tradingview-alert && git pull origin development && npm install && npm run production'
+  - ssh root@138.197.215.14 -o StrictHostKeyChecking=no 'sudo npm install -g pm2 && sudo npm install -g ts-node && cd ~/code/tradingview-alert && git pull origin development && sudo npm install && sudo npm run production'
