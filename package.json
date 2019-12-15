@@ -5,7 +5,8 @@
   "main": "./src/bin/www.ts",
   "scripts": {
     "development": "./node_modules/.bin/pm2 start ecosystem.config.js --env development",
-    "production": "./node_modules/.bin/pm2 start ecosystem.config.js --env production"
+    "production": "./node_modules/.bin/pm2 start ecosystem.config.js --env production",
+    "build": "./node_modules/.bin/tsc"
   },
   "keywords": [],
   "author": "",
