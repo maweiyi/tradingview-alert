@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
+    "lib": ["es6", "esnext"],
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": false,
@@ -10,6 +11,6 @@
     "outDir": "dist",
     "typeRoots": ["node_modules/@types"]
   },
-  "files": ["src/bin/www.ts"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
