@@ -2,8 +2,8 @@ module.exports = {
   apps: [
     {
       name: 'TradingViewAlert',
-      interpreter: './node_modules/.bin/ts-node',
-      script: './src/bin/www.ts',
+      interpreter: 'node',
+      script: './dist/bin/www.js',
       instances: 1,
       autorestart: true,
       watch: false,

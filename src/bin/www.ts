@@ -7,11 +7,11 @@ require('dotenv').config({ path: path.join(__dirname, '../../.env') });
 let httpsServer;
 if (process.env.NODE_ENV === 'development') {
   const privateKey = fs.readFileSync(
-    path.join(__dirname, '../ssl/private.pem'),
+    path.join(__dirname, '../../ssl/private.pem'),
     'utf8',
   );
   const certificate = fs.readFileSync(
-    path.join(__dirname, '../ssl/ca.cer'),
+    path.join(__dirname, '../../ssl/ca.cer'),
     'utf8',
   );
   const credentials = { key: privateKey, cert: certificate };
